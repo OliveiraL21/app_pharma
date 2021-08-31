@@ -73,8 +73,8 @@ class _listaFarmaciaState extends State<listaFarmacia> {
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(20),
                                   bottomLeft: Radius.circular(20)),
-                              child: Image.network(
-                                'https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png',
+                              child: Image.asset(
+                                'images/LogotypeVerde.png',
                                 width: 100,
                                 height: 100,
                               ),

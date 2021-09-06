@@ -14,7 +14,7 @@ class _pageCadastroFarmaciaState extends State<pageCadastroFarmacia> {
   var maskDate = new MaskTextInputFormatter(
       mask: '##/##/####', filter: {"#": RegExp(r'[0-9]')});
   var maskCPF = new MaskTextInputFormatter(
-      mask: '###.###.###-##', filter: {"#": RegExp(r'[0-9]')});
+      mask: '##.###.###/####-##', filter: {"#": RegExp(r'[0-9]')});
   var maskCel = new MaskTextInputFormatter(
       mask: '(##) ####-####', filter: {"#": RegExp(r'[0-9]')});
 
@@ -132,7 +132,7 @@ class _pageCadastroFarmaciaState extends State<pageCadastroFarmacia> {
                           inputFormatters: [maskCPF],
                           decoration: InputDecoration(
                             labelText: "CNPJ",
-                            hintText: "123.456.789-90",
+                            hintText: "12.345.678/0001-90",
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color.fromARGB(255, 49, 175, 180),

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pharma_app/views/PageCadastro.dart';
 import 'package:pharma_app/views/PageCadastroFarmacia.dart';
+import 'package:pharma_app/views/PageChoseCadastro.dart';
 import 'package:pharma_app/views/PageListaFarmacias.dart';
 
 void main() {
@@ -167,7 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => pageCadastroFarmacia()),
+                              builder: (context) => pageChooseCadastro()),
                         );
                       },
                       style: OutlinedButton.styleFrom(

@@ -69,17 +69,20 @@ class _listaFarmaciaState extends State<listaFarmacia> {
                         ),
                         child: Row(
                           children: <Widget>[
-                            ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  bottomLeft: Radius.circular(20)),
-                              child: Image.asset(
-                                'images/LogotypeVerde.png',
-                                width: 100,
-                                height: 100,
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(20),
+                                    bottomLeft: Radius.circular(20)),
+                                child: Image.asset(
+                                  'images/LogotipoVerde.png',
+                                  width: 100,
+                                  height: 100,
+                                ),
                               ),
                             ),
-                            Text("A\nb\nD")
+                            Text("Drogaria Dias\nAv São Carlos, 791, Mogi Guaçu\n(19)38617897")
                           ],
                         ),
                       )

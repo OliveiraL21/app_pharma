@@ -13,9 +13,21 @@ class _farmaciaProdutoState extends State<farmaciaProduto>{
     return Scaffold(
       body: Container(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Card(
-              child: Text("Teste"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                child: Text("Teste"),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    bottomLeft: Radius.circular(20),
+                  ),
+                ),
+
+              ),
             ),
           ],
         ),

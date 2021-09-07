@@ -112,51 +112,54 @@ class _pageChooseCadastroState extends State<pageChooseCadastro> {
                           ),
                         ),
                       ),
-                      Container(
-                        height: 50,
-                        width: 300,
-                        child: OutlinedButton(
-                          onPressed: () {
-                            if(_opcao == "Farmacia"){
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Container(
+                          height: 50,
+                          width: 300,
+                          child: OutlinedButton(
+                            onPressed: () {
+                              if(_opcao == "Farmacia"){
 
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => pageCadastroFarmacia()),
-                              );
-                            }
-                            else{
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => pageCadastroFarmacia()),
+                                );
+                              }
+                              else{
 
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => pageCadastro()),
-                              );
-                            }
-                          },
-                          style: OutlinedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              side: BorderSide(
-                                width: 1.0,
-                                color: Color.fromARGB(255, 49, 175, 180),
-                              )),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Cadastrar',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 49, 175, 180),
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18),
-                              ),
-                              Icon(
-                                Icons.article_outlined,
-                                color: Color.fromARGB(255, 49, 175, 180),
-                                size: 30,
-                              )
-                            ],
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => pageCadastro()),
+                                );
+                              }
+                            },
+                            style: OutlinedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                side: BorderSide(
+                                  width: 1.0,
+                                  color: Color.fromARGB(255, 49, 175, 180),
+                                )),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Cadastrar',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 49, 175, 180),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
+                                ),
+                                Icon(
+                                  Icons.article_outlined,
+                                  color: Color.fromARGB(255, 49, 175, 180),
+                                  size: 30,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),

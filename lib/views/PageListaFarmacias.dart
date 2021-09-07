@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pharma_app/views/PageFarmacia.dart';
 
 class listaFarmacia extends StatefulWidget {
   const listaFarmacia({Key? key}) : super(key: key);
@@ -60,32 +61,39 @@ class _listaFarmaciaState extends State<listaFarmacia> {
                   padding: EdgeInsets.all(30),
                   child: Column(
                     children: <Widget>[
-                      Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(20),
-                            bottomLeft: Radius.circular(20),
+                      InkWell(
+                        onTap:(){
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => farmaciaProduto()
+                          ));
+                        },
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(20),
+                              bottomLeft: Radius.circular(20),
+                            ),
                           ),
-                        ),
-                        child: Row(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(20),
-                                    bottomLeft: Radius.circular(20)),
-                                child: Image.asset(
-                                  'images/LogotipoVerde.png',
-                                  width: 100,
-                                  height: 100,
+                          child: Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(20),
+                                      bottomLeft: Radius.circular(20)),
+                                  child: Image.asset(
+                                    'images/LogotipoVerde.png',
+                                    width: 100,
+                                    height: 100,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Text("Drogaria Dias\nAv São Carlos, 791, Mogi Guaçu\n(19)38617897")
-                          ],
+                              Text("Drogaria Dias\nAv São Carlos, 791, Mogi Guaçu\n(19)38617897")
+                            ],
+                          ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -124,46 +132,46 @@ class _listaFarmaciaState extends State<listaFarmacia> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 8.0,top: 8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Olá",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 40,
-                              color: Color.fromARGB(255, 49, 175, 180),
-                            ),
-                          ),
-                          Text(
-                            "Matheus Mazarotto",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            style: ButtonStyle(
-                              enableFeedback: false,
-                              overlayColor: MaterialStateProperty.all<Color>(
-                                  Colors.transparent),
-                              padding: MaterialStateProperty.all<EdgeInsets>(
-                                  EdgeInsets.zero),
-                            ),
-                            child: Text(
-                              "Editar perfil",
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Olá",
                               textAlign: TextAlign.left,
                               style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 40,
                                 color: Color.fromARGB(255, 49, 175, 180),
                               ),
                             ),
-                          ),
-                        ],
+                            Text(
+                              "Matheus Mazarotto",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              style: ButtonStyle(
+                                enableFeedback: false,
+                                overlayColor: MaterialStateProperty.all<Color>(
+                                    Colors.transparent),
+                                padding: MaterialStateProperty.all<EdgeInsets>(
+                                    EdgeInsets.zero),
+                              ),
+                              child: Text(
+                                "Editar perfil",
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 49, 175, 180),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    )
                   ],
                 ),
               ),

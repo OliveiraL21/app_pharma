@@ -123,7 +123,7 @@ class _listaFarmaciaState extends State<listaFarmacia> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 8.0, right: 8.0),
+                      padding: EdgeInsets.only(left: 8.0,top: 8.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -175,43 +175,46 @@ class _listaFarmaciaState extends State<listaFarmacia> {
                     topLeft: Radius.circular(40),
                     bottomLeft: Radius.circular(40)),
               ),
-              child: Column(
-                children: <Widget>[
-                  ListTile(
-                    title: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.checklist_sharp,
-                          size: 25,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15.0),
-                          child: Text(
-                            "Lista de pedidos",
-                            style: TextStyle(fontSize: 18),
+              child: SizedBox(
+                height: 500,
+                child: Column(
+                  children: <Widget>[
+                    ListTile(
+                      title: Row(
+                        children: <Widget>[
+                          Icon(
+                            Icons.checklist_sharp,
+                            size: 25,
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  ListTile(
-                    title: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.pin_drop_outlined,
-                          size: 25,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15.0),
-                          child: Text(
-                            "Endereços",
-                            style: TextStyle(fontSize: 18),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15.0),
+                            child: Text(
+                              "Lista de pedidos",
+                              style: TextStyle(fontSize: 18),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                    ListTile(
+                      title: Row(
+                        children: <Widget>[
+                          Icon(
+                            Icons.pin_drop_outlined,
+                            size: 25,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15.0),
+                            child: Text(
+                              "Endereços",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

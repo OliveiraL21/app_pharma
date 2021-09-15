@@ -1,39 +1,48 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-class farmaciaProduto extends StatefulWidget{
+class farmaciaProduto extends StatefulWidget {
   const farmaciaProduto({Key? key}) : super(key: key);
 
   @override
   _farmaciaProdutoState createState() => _farmaciaProdutoState();
 }
 
-class _farmaciaProdutoState extends State<farmaciaProduto>{
+class _farmaciaProdutoState extends State<farmaciaProduto> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Card(
-                child: Text("Teste"),
-                shape: RoundedRectangleBorder(
+        body: SafeArea(
+      child: Container(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Image.asset(
+                'images/LogotipoVerde.png'
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    bottomLeft: Radius.circular(20),
+                    topLeft: Radius.circular(50),
+                    topRight: Radius.circular(50),
                   ),
                 ),
-
               ),
-            ),
-          ],
-        ),
-      ),
-    );
+              Card(
+                child: Row(
+                  children: <Widget> [
+                    Text(
+                      "Insulina Caneta",
+                    )
+                  ],
+                ),
+              ),
+            ],
+          )),
+
+    ));
   }
-
 }
-
